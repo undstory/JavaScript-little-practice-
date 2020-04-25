@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #F4841a;
+    background-color: #222830;
+}
+
+h1, h2 {
+    font-family: 'Merriweather', serif;
+}
+
+h2 {
+    color: #004c53;
+    background-color: #F4841a;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.get {
+    cursor: pointer;
+}
+
+.number {
+    border: 2px solid #222830;
+    padding: .3rem ;
+}
+
+.get {
+    padding: .3rem 1.5rem;
+    border: 2px solid #222830;
+    background-color: #004c53;
+    color: #F4841a;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.get:hover {
+    background-color: #F4841a;
+    color: #004c53;
+}
+
+.box {
+    background-color: cornflowerblue;
+    padding: 2rem;
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+
+}
+
+.box-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+}
+
+.box-result  {
+    font-size: 2rem;
+}
+.btns {
+    padding: 1rem;
+}
+
+.box-plus, .box-minus {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.box-plus:hover {
+    background-color: #004c53;
+    color: white;
+}
+
+.box-minus:hover {
+    background-color: #222830;
+    color: #F4841a
+}
+
+
+
+
+
+/* font-family: 'Merriweather', serif;
+font-family: 'Roboto', sans-serif; */
