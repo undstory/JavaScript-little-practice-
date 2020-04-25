@@ -1,12 +1,19 @@
+html {
+    margin: 0;
+    padding: 0 2rem;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
 }
+
 h1 {
     text-align: center;
     text-transform: uppercase;
     color: #F4841a;
     background-color: #222830;
+    padding: 1rem;
 }
 
 h1, h2 {
@@ -29,7 +36,7 @@ h2 {
     padding: .3rem ;
 }
 
-.get, .bmi_btn {
+.get, .bmi_btn, .bmi_btn_new {
     padding: .3rem 1.5rem;
     border: 2px solid #222830;
     background-color: #004c53;
