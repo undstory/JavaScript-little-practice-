@@ -96,4 +96,9 @@ bmi_btn_new.addEventListener("click", function(){
     interpretation.value = ""; 
 })
 
+//!!Zadanie 4
 
+const dateOfBirth = document.querySelector(".date_of_birth");
+
+let dateBirth = new Date(dateOfBirth);
+console.log(dateBirth);
