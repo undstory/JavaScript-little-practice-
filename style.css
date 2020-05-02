@@ -31,12 +31,12 @@ h2 {
     cursor: pointer;
 }
 
-.number, .growth, .weight {
+.number, .growth, .weight, .date_of_birth {
     border: 2px solid #222830;
     padding: .3rem ;
 }
 
-.get, .bmi_btn, .bmi_btn_new {
+.get, .bmi_btn, .bmi_btn_new, .time_btn {
     padding: .3rem 1.5rem;
     border: 2px solid #222830;
     background-color: #004c53;
@@ -44,7 +44,7 @@ h2 {
     font-weight: bold;
     letter-spacing: 1px;
 }
-.get:hover {
+.get:hover, .bmi_btn:hover, .bmi_btn_new:hover, .time_btn:hover {
     background-color: #F4841a;
     color: #004c53;
 }
@@ -92,6 +92,11 @@ h2 {
     color: #F4841a
 }
 
+.time_result {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #F4841a;
+}
 
 
 

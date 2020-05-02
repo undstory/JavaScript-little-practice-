@@ -98,7 +98,22 @@ bmi_btn_new.addEventListener("click", function(){
 
 //!!Zadanie 4
 
-const dateOfBirth = document.querySelector(".date_of_birth");
+let dateOfBirth = document.querySelector(".date_of_birth");
+const timeBtn = document.querySelector(".time_btn");
+const timeResult = document.querySelector(".time_result");
 
-let dateBirth = new Date(dateOfBirth);
-console.log(dateBirth);
+function getDiffTime(){
+let date1 = dateOfBirth.value;
+let dateA = new Date(date1); 
+
+let now = new Date();
+
+let oneDay = 24*60*60*1000;
+
+let difference = Math.floor((now.getTime()-dateA.getTime())/(oneDay));
+
+timeResult.innerHTML = difference; 
+console.log(difference);
+}
+
+timeBtn.addEventListener('click', getDiffTime);
