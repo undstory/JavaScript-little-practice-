@@ -31,12 +31,14 @@ h2 {
     cursor: pointer;
 }
 
-.number, .growth, .weight, .date_of_birth {
+.number, .growth, .weight, .date_of_birth, .word1, .word2 {
     border: 2px solid #222830;
     padding: .3rem ;
+    margin-left: .8rem;
 }
 
-.get, .bmi_btn, .bmi_btn_new, .time_btn {
+
+.get, .bmi_btn, .bmi_btn_new, .time_btn, .word_btn {
     padding: .3rem 1.5rem;
     border: 2px solid #222830;
     background-color: #004c53;
@@ -44,7 +46,7 @@ h2 {
     font-weight: bold;
     letter-spacing: 1px;
 }
-.get:hover, .bmi_btn:hover, .bmi_btn_new:hover, .time_btn:hover {
+.get:hover, .bmi_btn:hover, .bmi_btn_new:hover, .time_btn:hover, .word_btn:hover {
     background-color: #F4841a;
     color: #004c53;
 }

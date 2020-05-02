@@ -103,17 +103,62 @@ const timeBtn = document.querySelector(".time_btn");
 const timeResult = document.querySelector(".time_result");
 
 function getDiffTime(){
-let date1 = dateOfBirth.value;
-let dateA = new Date(date1); 
 
-let now = new Date();
+    if(dateOfBirth.value !== ""){
 
-let oneDay = 24*60*60*1000;
+        let date1 = dateOfBirth.value;
+        let dateA = new Date(date1); 
 
-let difference = Math.floor((now.getTime()-dateA.getTime())/(oneDay));
+        let now = new Date();
 
-timeResult.innerHTML = difference; 
-console.log(difference);
+        const oneDay = 24*60*60*1000;
+
+        let difference = Math.floor((now.getTime()-dateA.getTime())/(oneDay));
+
+        timeResult.innerHTML = difference; 
+    } else {
+    alert("Jesteś nieuważny. Wpisz poprawną datę!");
+    }
 }
 
-timeBtn.addEventListener('click', getDiffTime);
+    timeBtn.addEventListener('click', getDiffTime);
+
+
+
+//!! Zadanie 5 
+
+let word1 = document.querySelector(".word1");
+let word2 = document.querySelector(".word2");
+const wordBtn = document.querySelector(".word_btn");
+const wordResult = document.querySelector(".word_result");
+
+wordBtn.addEventListener('click', function(){
+
+    if (word1.value !== "" & word2.value !== ""){
+
+        word1 = word1.value; 
+        let word1L = word1.length;
+        word2 = word2.value;
+        let word2L = word2.length;
+    
+        console.log(word1L);
+        console.log(word2L);
+    
+        if(word1L > word2L){
+            wordResult.innerHTML = "Pierwsze słowo jest większe od drugiego!";
+        } else if(word2L < word2L){
+            wordResult.innerHTML = "Pierwsze słowo jest mniejsze od drugiego!";
+        } else {
+            wordResult.innerHTML = "Obydwa słowa są równej długości!";
+        }
+    } else {
+        alert("Z tymi słowami jest coś nie tak, wpisz ponownie!")
+    }
+
+})
+   
+    
+    
+
+// let word1Length = word1.value; 
+// let word2Length = word2.value;
