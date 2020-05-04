@@ -157,8 +157,48 @@ wordBtn.addEventListener('click', function(){
 
 })
    
+// !! Zadanie 6 
+
+const btn6 = document.querySelector('.btn6');
+
+btn6.addEventListener('click', function(){
+
+    let arr =[];
+    
+    for(let i=0; i<30; i++){
+        let num = Math.floor(Math.random()*100);
+        arr.push(num);
+    }
+
+    console.log(arr);
+
+    arr.sort(function(a, b){
+        return a-b;
+    })
+    
+    console.log(arr);
+    let newArr =[];
+    let x = 1;
+
+  
+    for(let i=0; i<arr.length; i++){
+        arr.filter(function(a, b){
+            if(a == b){
+                x+=1;
+                newArr.push(a);
+            }
+        })
+
+
+    }
+
+    console.log(newArr);
+    console.log(x);
     
     
 
-// let word1Length = word1.value; 
-// let word2Length = word2.value;
+
+
+
+
+})
