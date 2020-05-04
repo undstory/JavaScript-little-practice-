@@ -165,8 +165,8 @@ btn6.addEventListener('click', function(){
 
     let arr =[];
     
-    for(let i=0; i<30; i++){
-        let num = Math.floor(Math.random()*100);
+    for(let i=0; i<10; i++){
+        let num = Math.floor(Math.random()*10);
         arr.push(num);
     }
 
@@ -179,25 +179,35 @@ btn6.addEventListener('click', function(){
     console.log(arr);
     let newArr =[];
     let x = 1;
+    let counter = 0; 
+    let item;  
 
   
     for(let i=0; i<arr.length; i++){
-        arr.filter(function(a, b){
-            if(a == b){
-                x+=1;
-                newArr.push(a);
+        
+        for(let j=i; j<arr.length; j++){
+            
+            if(arr[i]==arr[j]){
+                counter++;
             }
-        })
 
+            if(x < counter){
+                x = counter;
+                item = arr[i];
+                newArr.push(item);
+            }
+        }
+
+        counter = 0;
+       
 
     }
 
-    console.log(newArr);
-    console.log(x);
-    
+   
     
 
 
+    console.log("Pierwsza najpopularniejsza liczba to: " + item + ", która wystąpiła " + x + " razy.");
 
 
 
