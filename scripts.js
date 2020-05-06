@@ -160,6 +160,8 @@ wordBtn.addEventListener('click', function(){
 // !! Zadanie 6 
 
 const btn6 = document.querySelector('.btn6');
+const array6 = document.querySelector('.array6');
+const result6 = document.querySelector('.result6');
 
 btn6.addEventListener('click', function(){
 
@@ -204,11 +206,48 @@ btn6.addEventListener('click', function(){
     }
 
    
+    array6.innerHTML = "Losowa tablica to: " + arr; 
+    result6.innerHTML = "Pierwsza najpopularniejsza liczba to: " + item + ", która wystąpiła " + x + " razy.";
+
+})
+
+//!! Zadanie 7
+
+const los1 = document.querySelector(".los1");
+const los2 = document.querySelector(".los2");
+const res7a = document.querySelector(".res7a");
+const res7b = document.querySelector(".res7b");
+const result7 = document.querySelector(".result7");
+const howResult = document.querySelector(".howResult");
+
+let num1; 
+let num2; 
+
+los1.addEventListener('click', function(){
+    num1 = Math.floor(Math.random()*100);
+    res7a.innerHTML = `Pierwsza wylosowana liczba to: ${num1}.`; 
+})
+
+los2.addEventListener('click', function(){
+    num2 = Math.floor(Math.random()*10);
+    res7b.innerHTML = `Druga wylosowana liczba to: ${num2}.`; 
+})
+
+howResult.addEventListener('click', function(){
+    if(num1>num2) {
+        if(num1%num2==0){
+            result7.innerHTML = "Pierwsza liczba jest wielokrotnością drugiej.";
+        } else {
+            result7.innerHTML = "Pierwsza liczbanie jest wielokrotnością drugiej.";
+        }
+    } else if(num2>num1) {
+        if(num2%num1==0){
+            result7.innerHTML = "Druga liczba jest wielokrotnością pierwszej.";
+        } else {
+            result7.innerHTML = "Druga liczba nie jest wielokrotnością pierwszej.";
+        }
+    } else {
+        result7.innerHTML = "Obydwie liczby są sobie równe, czyli są swoją wielokrotnością.";
+    }
     
-
-
-    console.log("Pierwsza najpopularniejsza liczba to: " + item + ", która wystąpiła " + x + " razy.");
-
-
-
 })
