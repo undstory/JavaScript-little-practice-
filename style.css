@@ -31,14 +31,15 @@ h2 {
     cursor: pointer;
 }
 
-.number, .growth, .weight, .date_of_birth, .word1, .word2 {
+.number, .growth, .weight, .date_of_birth, .input9, .word1, .word2, .input8 {
     border: 2px solid #222830;
     padding: .3rem ;
     margin-left: .8rem;
 }
 
 
-.get, .bmi_btn, .bmi_btn_new, .time_btn, .word_btn, .btn6, .los1, .los2, .howResult {
+.get, .bmi_btn, .bmi_btn_new, .time_btn, .word_btn, .btn6, .los1, .los2, .howResult,
+.btn8, .btnwhom8, .btn9, .check9 {
     padding: .3rem 1.5rem;
     border: 2px solid #222830;
     background-color: #004c53;
@@ -47,7 +48,7 @@ h2 {
     letter-spacing: 1px;
 }
 .get:hover, .bmi_btn:hover, .bmi_btn_new:hover, .time_btn:hover, .word_btn:hover, .btn6:hover,
-.los1:hover, .los2:hover, .howResult:hover {
+.los1:hover, .los2:hover, .howResult:hover, .check9:hover, .btn9:hover, .btn8:hover, .btnwhom8:hover {
     background-color: #F4841a;
     color: #004c53;
 }
@@ -95,7 +96,7 @@ h2 {
     color: #F4841a
 }
 
-.time_result {
+.time_result, .res9 {
     font-weight: bold;
     letter-spacing: 1px;
     color: #F4841a;

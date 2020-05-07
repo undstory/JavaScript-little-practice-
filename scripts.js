@@ -288,6 +288,42 @@ btnwhom8.addEventListener('click', function(){
         } else {
             result8.innerHTML = "Wybrana liczba nie znajduje się w tej tablicy!"; 
         }
-    
-   
 })
+
+//!! Zadanie 9
+const btn9 = document.querySelector('.btn9'),
+    arr9 = document.querySelector('.arr9'),
+    res9 = document.querySelector('.res9'),
+    check9 = document.querySelector('.check9'),
+    input9 = document.querySelector('.input9');
+
+    let array9 = [];
+
+    btn9.addEventListener('click', function(){
+        for(let i=0; i<20; i++){
+            let num9 = Math.floor(Math.random()*100);
+            array9.push(num9);
+        }
+        arr9.innerHTML = array9; 
+        
+    })
+
+    check9.addEventListener('click', function(){
+        let numeroN = parseFloat(input9.value);
+        newArray9=[];
+        if(numeroN !== 0 && input9.value !== ""){
+            for(let i=0; i<array9.length; i++){
+                if(array9[i]%numeroN === 0){
+                    newArray9.push(array9[i]);
+                }
+               
+            }
+        } else {
+            alert("Och, daj spokój, wpisz właściwą wartość..");
+        }
+       
+        console.log(newArray9);
+        res9.innerHTML = newArray9.length;
+    })
+
+    
