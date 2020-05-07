@@ -145,9 +145,9 @@ wordBtn.addEventListener('click', function(){
         console.log(word2L);
     
         if(word1L > word2L){
-            wordResult.innerHTML = "Pierwsze słowo jest większe od drugiego!";
+            wordResult.innerHTML = "Pierwsze słowo jest dłuższe od drugiego!";
         } else if(word2L < word2L){
-            wordResult.innerHTML = "Pierwsze słowo jest mniejsze od drugiego!";
+            wordResult.innerHTML = "Pierwsze słowo jest krótsze od drugiego!";
         } else {
             wordResult.innerHTML = "Obydwa słowa są równej długości!";
         }
@@ -238,7 +238,7 @@ howResult.addEventListener('click', function(){
         if(num1%num2==0){
             result7.innerHTML = "Pierwsza liczba jest wielokrotnością drugiej.";
         } else {
-            result7.innerHTML = "Pierwsza liczbanie jest wielokrotnością drugiej.";
+            result7.innerHTML = "Pierwsza liczba nie jest wielokrotnością drugiej.";
         }
     } else if(num2>num1) {
         if(num2%num1==0){
@@ -250,4 +250,44 @@ howResult.addEventListener('click', function(){
         result7.innerHTML = "Obydwie liczby są sobie równe, czyli są swoją wielokrotnością.";
     }
     
+})
+
+// !! Zadanie 8 
+
+const btn8 = document.querySelector('.btn8'),
+    input8 = document.querySelector('.input8'),
+    output8 = document.querySelector('.output8'),
+    result8 = document.querySelector('.result8');
+let btnwhom8 = document.querySelector('.btnwhom8');
+let arr8 = [];
+let whom;
+btn8.addEventListener('click', function(){
+    for(let i=0; i<20; i++){
+        let num8 = Math.floor(Math.random()*10);
+        arr8.push(num8);
+    }
+
+    // arr8 = arr8.join(", ");
+    output8.innerHTML = arr8; 
+    return arr8; 
+})
+
+btnwhom8.addEventListener('click', function(){
+    whom = parseFloat(input8.value);
+    let how = 0; 
+    let position = []; 
+        if(arr8.includes(whom)){            
+           
+            for(let i=0; i<arr8.length; i++){
+                if(whom === arr8[i]){
+                    how+=1;
+                    position.push(i); 
+                }
+            }
+            result8.innerHTML = "Wybrana liczba to: " + whom + " wystepuje ona w tablicy " + how + " raz/y, na pozycji: " + position; 
+        } else {
+            result8.innerHTML = "Wybrana liczba nie znajduje się w tej tablicy!"; 
+        }
+    
+   
 })
