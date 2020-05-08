@@ -326,4 +326,36 @@ const btn9 = document.querySelector('.btn9'),
         res9.innerHTML = newArray9.length;
     })
 
-    
+    // !! Zadanie 12 
+
+    const hugeContainer = document.querySelector('.hugeContainer');
+    let smallContainer = document.querySelectorAll('.smallContainer'); 
+
+        smallContainer.forEach(function(elem){
+            elem.addEventListener('click', function(){
+                if(elem.classList.contains("red")){
+                    hugeContainer.classList.remove("yellow", "ocean", "bottle", "green");
+                    hugeContainer.classList.add("red");
+                }
+                if(elem.classList.contains("yellow")){
+                    hugeContainer.classList.remove("red", "ocean", "bottle", "green");
+                    hugeContainer.classList.add("yellow");
+                }
+
+                if(elem.classList.contains("ocean")){
+                    hugeContainer.classList.remove("red", "yellow", "bottle", "green");
+                    hugeContainer.classList.add("ocean");
+                }
+
+                if(elem.classList.contains("bottle")){
+                    hugeContainer.classList.remove("red", "ocean", "yellow", "green");
+                    hugeContainer.classList.add("bottle");
+                }
+
+                if(elem.classList.contains("green")){
+                    hugeContainer.classList.remove("red", "ocean", "bottle", "yellow");
+                    hugeContainer.classList.add("green");
+                }
+            })
+        })
+      
