@@ -344,7 +344,7 @@ const btn9 = document.querySelector('.btn9'),
             arr[1] = 1;
             arr[i] = (arr[i-2] + arr[i-1]);
         }
-        res10.innerHTML= arr;
+        res10.innerHTML= arr.join(", ");
     })
     
     btn10a.addEventListener('click', function(){
@@ -355,6 +355,29 @@ const btn9 = document.querySelector('.btn9'),
     })
 
     // !! Zadanie 11 
+
+    let how = document.querySelector('.how');
+    const btn11 = document.querySelector(".btn11");
+    const res11 = document.querySelector(".res11");
+    const btn11a = document.querySelector(".btn11a");
+
+    btn11.addEventListener('click', function(){
+      
+        let length = parseFloat(how.value);
+        for(let i=0; i<length; i++){
+            arr[0] = 1000;
+            arr[i] = Math.floor(arr[i-1]/2);
+        }
+        res11.innerHTML= arr.join(", ");
+    }) 
+    
+    btn11a.addEventListener('click', function(){
+        arr = [];
+        res11.innerHTML = "";
+        how.value = "";
+        length = 0;
+    })
+    
 
     // !! Zadanie 12 
 
