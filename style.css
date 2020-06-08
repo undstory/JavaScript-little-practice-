@@ -31,7 +31,7 @@ h2 {
     cursor: pointer;
 }
 
-.number, .growth, .weight, .date_of_birth, .input9, .word1, .word2, .input8 {
+.number, .growth, .weight, .date_of_birth, .input9, .word1, .word2, .input8, .howElems {
     border: 2px solid #222830;
     padding: .3rem ;
     margin-left: .8rem;
@@ -39,7 +39,7 @@ h2 {
 
 
 .get, .bmi_btn, .bmi_btn_new, .time_btn, .word_btn, .btn6, .los1, .los2, .howResult,
-.btn8, .btnwhom8, .btn9, .check9 {
+.btn8, .btnwhom8, .btn9, .check9, .btn10, .btn10a {
     padding: .3rem 1.5rem;
     border: 2px solid #222830;
     background-color: #004c53;

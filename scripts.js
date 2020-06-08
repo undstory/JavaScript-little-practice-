@@ -326,6 +326,36 @@ const btn9 = document.querySelector('.btn9'),
         res9.innerHTML = newArray9.length;
     })
 
+    // !! Zadanie 10
+
+ 
+    const btn10 = document.querySelector(".btn10");
+    const btn10a = document.querySelector(".btn10a");
+    let howElems = document.querySelector('.howElems');
+    const res10 = document.querySelector('.res10');
+    
+    let arr = []; 
+
+    btn10.addEventListener('click', function(){
+      
+        let length = parseFloat(howElems.value);
+        for(let i=0; i<length; i++){
+            arr[0] = 1;
+            arr[1] = 1;
+            arr[i] = (arr[i-2] + arr[i-1]);
+        }
+        res10.innerHTML= arr;
+    })
+    
+    btn10a.addEventListener('click', function(){
+        arr = [];
+        res10.innerHTML = "";
+        howElems.value = "";
+        length = 0;
+    })
+
+    // !! Zadanie 11 
+
     // !! Zadanie 12 
 
     const hugeContainer = document.querySelector('.hugeContainer');
