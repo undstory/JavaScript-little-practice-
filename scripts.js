@@ -411,4 +411,19 @@ const btn9 = document.querySelector('.btn9'),
                 }
             })
         })
+
+        // !! Zadanie 13
+
+        const resu13 = document.querySelector('.btn13');
+
+        resu13.addEventListener('click', function() {
+            const numbers = [...document.querySelectorAll('.num') ];
+            console.log(numbers);
+            const sum = numbers.reduce( (sum, {
+                valueAsNumber: number } ) => {
+                    return sum + number;
+                },0);
+
+                document.querySelector('.res13').innerHTML = sum;
+        })
       
